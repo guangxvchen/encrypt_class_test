@@ -45,6 +45,7 @@ public class EncryptClazz {
 //        List<String> paths = Arrays.asList(homePath.split("/"));
 //        paths.set(paths.size() - 3, "bdsc-web");
 //        homePath = paths.stream().collect(Collectors.joining(File.separator));
+        // 加密为 .classes 为了防止加载报错
         File newClassFile = new File(homePath + File.separator + clazzPath + "es");
         try {
             newClassFile.getParentFile().mkdirs();
